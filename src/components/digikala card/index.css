@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+}
+
+.containor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(233, 66, 66);
+    border-radius: 17px;
+    height: 283px;
+    padding-left: 0.2rem;
+}
+.cards_explaination {
+    height: 246px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first_pic {
+    width: 92px;
+    height: 77px;
+}
+.sec_pic {
+    width: 145px;
+    height: 115px;
+}
+
+.cards_explaination button {
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.spacial_card {
+    border-radius: 10% !important;
+}
