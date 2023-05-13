@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react"
 import Button from "../../components/button/Button"
+import axios from "axios"
 
 
-const LoginPage = () => {
+const LoginPage = (props) => {
     const emailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
     const mobieRegex = /09[0-3][0-9]-?[0-9]{3}-?[0-9]{4}/
 
     const [error , setError] = useState(true)
     const [inputVal, setInputVal] = useState("")
 
-    useEffect (()=>{
-        console.log("error checked")
-    },[error])
+    // useEffect (()=>{
+    //     alert("error checked")
+    // },[error])
 
     function type(e) {
         setInputVal(e)
@@ -23,6 +24,11 @@ const LoginPage = () => {
             setError(false)
          }
     }
+
+    // function addData (id) {
+    //     axios.put(`http://localhost:3000/sadra/${id}` , {name : "mmad"})
+    //     .then(res => console.log(res))
+    // }
     return(
         <>
         <div  className="dir-rtl w-full h-screen flex flex-row items-center justify-center">
@@ -39,7 +45,7 @@ const LoginPage = () => {
                     <input value={inputVal} onChange={(event) => type(event.target.value) } className="h-[49px] rounded-lg border-[1px] border-[#67e8f9] outline-0 p-2" type="text" />
                     <small className={`text-[red] my-2 ${error ? 'hidden' : 'block'}`}>لطفا این قسمت را خالی نگذارید</small>
                     <Button onClick={click}>ورود</Button>
-                    
+                    <Button onClick={() => addData(2)}>get</Button>
                 </div>
 
                 <p className="text-xs w-[380px] pr-4 mt-2.5">

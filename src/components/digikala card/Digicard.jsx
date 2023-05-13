@@ -2,7 +2,7 @@ import './Dificard.css'
 
 const Digikala_card = (props)=> {
     return (
-        <div className='contaionor' id={props.id}>
+        <div className='contaionor' key={`productList ${props.key}`} id={props.id}>
             <div className='logo'>
                 <img src={props.src}/>
             </div>
