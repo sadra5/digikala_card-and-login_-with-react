@@ -23,10 +23,6 @@ const ShopingItem = (props)=> {
                     </div>
                     )})}
             </div>
-            <div>
-                <span>{props.shopinglist.reduce((sum , current) => sum + current.price, 0)}$</span>
-                <Button dlj='m-0	'>خرید </Button>
-            </div>
 
         </div>
             
