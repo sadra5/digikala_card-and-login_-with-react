@@ -1,3 +1,4 @@
+import Button from '../button/Button'
 import './Dificard.css'
 
 const Digikala_card = (props)=> {
@@ -15,7 +16,7 @@ const Digikala_card = (props)=> {
                 </div>
             </div>
 
-            <del> {props.mainPrice} </del>
+            <del className='flex justify-between'> <p className='ml-[12px]'>{props.mainPrice}</p> <button onClick={() => props.setshopinglist([...props.shopinglist , { title : props.title, src : props.img, price : props.currentPrice, shopId: props.shopId } ])} className='bg-[red] text-[white] -[5px]'>+</button> </del>
         </div>
     )
 }

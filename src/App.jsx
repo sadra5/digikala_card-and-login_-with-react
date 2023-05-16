@@ -6,7 +6,7 @@ import LoginPage from './pages/login page/LoginPage'
 function App() {
   const [propDrill, setpropDrill] = useState("5")
   return (
-    <Digicard propDrill={propDrill} setpropDrill={setpropDrill} />
+    <Digicard/>
   )
 }
 
